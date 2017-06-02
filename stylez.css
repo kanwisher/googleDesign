@@ -1,7 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
 html, body {
   height: 100%;
   margin: 0;
   font-family: arial;
+}
+
+a:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .topHeader {
@@ -52,10 +61,9 @@ nav > a {
 
 .wrapper {
   min-height: 100%;
-
   /* Equal to height of footer */
   /* But also accounting for potential margin-bottom of last child */
-  margin-bottom: -50px;
+  margin-bottom: -45px;
 }
 
 .mainContent {
@@ -68,27 +76,55 @@ nav > a {
   margin-top: 100px;
   text-align: center;
   font-family: "Product Sans";
-  font-size: 80px;
-  margin-bottom: 10px;
+  font-size: 100px;
+  margin-bottom: 20px;
+  cursor: default;
+
 }
 
-.logo:nth-child(2), .logo:nth-child(4) {
+.logo  > span:nth-child(1), .logo > span:nth-child(4) {
   color: #4285f4;
 }
+
+.logo  > span:nth-child(2), .logo > span:nth-child(6) {
+  color: #ea4335;
+}
+
+.logo > span:nth-child(6) {
+  display: inline-block; /* can't tranform inline elements */
+  transform: rotate(-17deg);
+}
+
+ .logo > span:nth-child(3) {
+  color: #fbbc05;
+}
+
+ .logo > span:nth-child(5) {
+  color: #34a853;
+ }
+
 
 .inputContainer {
   width: 600px;
   margin: 0 auto;
-  border: thin solid black;
+  border: solid 1px #eaeaea;
   display: flex;
   align-items: center;
+  box-shadow: -1px 2px 8px rgba(68,68,68,0.3); 
 }
 
+
 .mainSearch {
-  height: 35px;
-  width: 93%;
+  height: 40px;
+  width: 90%;
   border: none;
+  margin-left: 15px;
+  font-size: 16px;
   
+}
+
+input:focus {
+  outline: none;
 }
 
 .buttonGroup {
@@ -106,11 +142,18 @@ nav > a {
   color: #757575;
   font-size: 13px;
   margin-bottom: 20px;
+  border: solid 1px white;
+}
+
+.buttonGroup > button:hover {
+  color: black;
+  border: solid 1px #c6c6c6
 }
 
 .footer,
 .push {
-  height: 50px; /* more sticky footer magic */
+  height: 45px; /* more sticky footer magic */
+  line-height: 40px;
 }
 
 .footer {
@@ -131,10 +174,12 @@ footer > ul > li > a {
   margin-left: 15px;
 }
 
-a:hover {
-  text-decoration: underline;
-  cursor: pointer;
+footer > ul {
+  padding-left: 20px;
+  margin: 0;
 }
+
+
 
 .fLeft {
   float: left;
