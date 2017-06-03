@@ -63,7 +63,7 @@ nav > a {
   min-height: 100%;
   /* Equal to height of footer */
   /* But also accounting for potential margin-bottom of last child */
-  margin-bottom: -45px;
+  margin-bottom: -65px;
 }
 
 .mainContent {
@@ -82,6 +82,10 @@ nav > a {
 
 }
 
+.logo > span {
+  margin-right: -4px;
+}
+
 .logo  > span:nth-child(1), .logo > span:nth-child(4) {
   color: #4285f4;
 }
@@ -92,7 +96,7 @@ nav > a {
 
 .logo > span:nth-child(6) {
   display: inline-block; /* can't tranform inline elements */
-  transform: rotate(-17deg);
+  transform: rotate(-17deg); /* give that "e" a nice little tilt */
 }
 
  .logo > span:nth-child(3) {
@@ -158,8 +162,9 @@ input:focus {
 
 .footer {
   background-color: #f2f2f2;
-  min-width: 1000px;
+  min-width: 500px; /*don't want floats to overlap on smaller screens */
   border-top: thin solid #d2d2d2;
+  margin-top: 20px;
 }
 
 ul>li {

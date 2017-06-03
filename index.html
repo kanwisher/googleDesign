@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8">
     <title>Google</title>
     <!--Google font!-->
     <link href='https://fonts.googleapis.com/css?family=Product+Sans:400,400i,700,700i' rel='stylesheet' type='text/css'>
@@ -9,6 +10,9 @@
       rel="stylesheet">
     <!--My personal-->
     <link rel="stylesheet" href="stylez.css">
+    
+    <!--favicon-->
+    <link rel="icon" href="favicon.ico">
 
 </head>
 <body>
@@ -28,9 +32,9 @@
             <div class="logo">
                 <span>G</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span> <!--Same line to omit any whitespace-->
                 </div>
-                <form>
+                <form method="GET" action="http://www.bing.com/search?hl=en-GB&source=hp&q=">
                     <div class="inputContainer">
-                        <input class="mainSearch" type="text" />
+                        <input class="mainSearch" type="text" name="q"/>
                         <i class="material-icons">mic</i>
                     </div>
                     <div class="buttonGroup">
